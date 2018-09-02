@@ -1,1 +1,1 @@
-sudo /usr/share/c17-ss/start-redir.sh
+/usr/share/c17-ss/start-redir.sh > /var/log/rc.log
