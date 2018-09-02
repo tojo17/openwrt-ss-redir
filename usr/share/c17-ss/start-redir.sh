@@ -7,7 +7,7 @@ if [ -n "$(ps | grep /etc/shadowsocks.json | grep -v grep)" ]; then
 fi
 
 # wait for internet connection
-while [ -n $(ping qq.com -c 1 | grep "0 packets received")]
+while [ -n "$(ping qq.com -c 1 | grep "0 packets received")" ]
 do
     sleep 1s
 done
