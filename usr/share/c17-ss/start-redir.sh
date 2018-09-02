@@ -62,4 +62,5 @@ iptables -t mangle -A PREROUTING -j SSREDIR_UDP
 # run ss-redir
 ($basepath/monitor.sh > /dev/null 2>&1) &
 # ss-redir -c /etc/shadowsocks.json -u -v
+# (/usr/bin/ss-redir -c /etc/shadowsocks.json -u > /dev/null 2>&1) &
 (ss-redir -c /etc/shadowsocks.json -u > /dev/null 2>&1) &
