@@ -1,0 +1,2 @@
+config dhcp 'lan'
+	list dhcp_option '6,8.8.8.8,8.8.4.4'
