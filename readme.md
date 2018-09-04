@@ -23,7 +23,7 @@ We have different ways to solve it:
 
 ### 1. Run a `ss-tunnel` to forward local 53 port (or another port) to `8.8.8.8:53`
 
-`sudo ss-tunnel -c /etc/shadowsocks.json -l 53 -v -b 127.0.0.1 -L 8.8.8.8:53 -u`
+`sudo ss-tunnel -c /etc/shadowsocks.json -l 53 -b 0.0.0.0 -L 8.8.8.8:53 -u`
 
 OpenWRT has a own DNS server called `Dnsmasq` running on port 53, to avoid port conflicts, you can either:
 
