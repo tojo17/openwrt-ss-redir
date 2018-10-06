@@ -1,1 +1,2 @@
 /usr/share/c17-ss/start-redir.sh > /var/log/rc.log
+(/usr/share/c17-ss/monitor.sh > /dev/null 2>&1) &

@@ -60,7 +60,7 @@ iptables -t mangle -A PREROUTING -j SSREDIR_UDP
 # route add -net 0.0.0.0 gw 10.0.2.2 netmask 0.0.0.0 dev enp0s3
 
 # run ss-redir
-($basepath/monitor.sh > /dev/null 2>&1) &
+# ($basepath/monitor.sh > /dev/null 2>&1) &
 # ss-redir -c /etc/shadowsocks.json -u -v
 # (/usr/bin/ss-redir -c /etc/shadowsocks.json -u > /dev/null 2>&1) &
 (ss-redir -c /etc/shadowsocks.json -u > /dev/null 2>&1) &
