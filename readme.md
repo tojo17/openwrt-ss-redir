@@ -2,16 +2,23 @@
 
 ## Usage
 
-- Install [`openwrt-shadowsocks`](https://github.com/shadowsocks/openwrt-shadowsocks), `iptables-mod-tproxy`, `ip`
-- Copy files in `usr` folder to system
+- Install [`openwrt-shadowsocks`](https://github.com/shadowsocks/openwrt-shadowsocks), `iptables-mod-tproxy`, and `ip` .
+- Copy files in `usr` folder to system.
 - Add or override settings accroding to files in `etc` folder, **DO NOT OVERRIDE THE WHOLE FILE!**
-- Config `/etc/shadowsocks.json` with your own server info
-- Run `chmod -R +x /usr/share/c17-ss` with root privilege
-- Reboot
+- Config `/etc/shadowsocks.json` with your own server info.
+- Run `chmod -R +x /usr/share/c17-ss` with root privilege.
+- Reboot.
+
+### Or (**recommanded**)
+
+- Install [`luci-app-shadowsocks`](https://github.com/shadowsocks/luci-app-shadowsocks) in addition to packages above.
+- Copy only files related to `monitor.sh` to your system.
+- No need to config `/etc/config/shadowsocks.json`, instead, config it on `service -> Shadowsocks` page of Luci.
 
 ## Note
 
 - The LED control in `monitor.sh` is for `GL-AR300M` only, if the service runs successfully, the center LED will be on.
+- This project is only tested on [this](http://download.gl-inet.com/firmware/ar300m/nand/testing/) firmware, which is based on OpenWrt 18.06.
 
 ## About DNS Poisoning in PRC
 
