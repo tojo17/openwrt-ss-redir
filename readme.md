@@ -9,7 +9,7 @@
 - Run `chmod -R +x /usr/share/c17-ss` with root privilege.
 - Reboot.
 
-### Or (**recommanded**)
+### Or (RECOMMENDED)
 
 - Install [`luci-app-shadowsocks`](https://github.com/shadowsocks/luci-app-shadowsocks) in addition to packages above.
 - Copy only files related to `monitor.sh` to your system.
