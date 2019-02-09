@@ -3,8 +3,10 @@ while :
 do
     sleep 2s
     # get ss config ip
+    echo "getting ss config file name..."
+    cfgfile=$(ps | grep ss-redir | grep -v grep | awk '{print $7}')
     echo "getting ss config ip..."
-    ssip=$(cat /var/etc/shadowsocks.*.json | grep \"server\" |awk -F ":" '{gsub(",", "", $2); gsub(" ", "", $2); gsub("\"", "", $2);print $2}')
+    ssip=$(cat $cfgfile | grep \"server\" |awk -F ":" '{gsub(",", "", $2); gsub(" ", "", $2); gsub("\"", "", $2);print $2}')
     echo "ss ip is: $ssip"
     # get real ip
     echo "getting real ip..."
