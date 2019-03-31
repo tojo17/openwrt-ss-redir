@@ -12,8 +12,10 @@
 ### Or (RECOMMENDED)
 
 - Install [`luci-app-shadowsocks`](https://github.com/shadowsocks/luci-app-shadowsocks) in addition to packages above.
+- *On GL-iNet routers*, change system language to non-Chinese, and Install only `gl-ss` in plugin menu.
 - Copy only files related to `monitor.sh` to your system.
-- No need to config `/etc/config/shadowsocks.json`, instead, config it on `service -> Shadowsocks` page of Luci.
+- Add only the `monitor.sh` command to your `rc.local`
+- No need to config `/etc/config/shadowsocks.json`, instead, config it on `service -> Shadowsocks` page of Luci. *On GL-iNet routers*, config your server in VPN -> SS Client menu
 
 ## Note
 
