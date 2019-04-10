@@ -46,4 +46,4 @@ or
 
 As I said above, ss-redir can only forward UDP packages of devices under it. So direct DNS query on connected devices is okay.
 
-Configurations in `/etc/config/dhcp` is for this purpose. Or you can set it manually in Luci at `Network` -> `Interfaces` -> `LAN` -> `DHCP Server` -> `Advanced Settings` -> `DHCP-Options`. The setting `6,8.8.8.8,8.8.4.4` advertises different DNS servers to clients. Check [OpenWrt Wiki](https://openwrt.org/docs/guide-user/base-system/dhcp) or [List of Options](http://www.networksorcery.com/enp/protocol/bootp/options.htm) for more details.
+Configurations in `/etc/config/dhcp` is for this purpose. Or you can set it manually in Luci at `Network` -> `Interfaces` -> `LAN` -> `DHCP Server` -> `Advanced Settings` -> `DHCP-Options`. The setting `6,8.8.8.8,8.8.4.4` advertises different DNS servers to clients. Or use `uci add_list dhcp.lan.dhcp_option='6,8.8.8.8,8.8.4.4' && uci commit` to commit. Check [OpenWrt Wiki](https://openwrt.org/docs/guide-user/base-system/dhcp) or [List of Options](http://www.networksorcery.com/enp/protocol/bootp/options.htm) for more details.
